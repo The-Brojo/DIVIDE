@@ -55,3 +55,4 @@ func play_animation():
 	$AnimatedSprite2D.flip_h = _direction == Directions.LEFT
 	$AnimatedSprite2D.animation = _animation
 	$AnimatedSprite2D.play()
+#IsaasWazHerrrre

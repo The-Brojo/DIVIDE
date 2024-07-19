@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://ciaq5e87f1fb5"]
+[gd_scene load_steps=45 format=3 uid="uid://ciaq5e87f1fb5"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_0xr5b"]
 [ext_resource type="Texture2D" uid="uid://bboucy6k2agn4" path="res://assets/Prototype_Character.png" id="1_bt2mo"]
@@ -369,15 +369,21 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_82inb"]
 size = Vector2(12, 15)
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_l64qp"]
+polygon = PackedVector2Array(-6, -6, 6, -6, 6, 9, -6, 9)
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_0xr5b")
 speed = 5000
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 1)
 sprite_frames = SubResource("SpriteFrames_dsksy")
 animation = &"idle_up"
 frame_progress = 0.0963545
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_82inb")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_l64qp")

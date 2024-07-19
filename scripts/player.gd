@@ -4,7 +4,6 @@ extends CharacterBody2D
 var _animation = 'idle_down'
 var animation_format ="{state}_{direction}"
 
-@export var linkedPlayer: CharacterBody2D
 @export var is_focued: bool = true
 
 enum States {IDLE, WALK, HURT, DIE}
@@ -19,7 +18,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var direction: Vector2 = Vector2.ZERO
-	if linkedPlayer || is_focued:
+	if  is_focued:
 		direction = Input.get_vector("left", "right", "up", "down")
 		velocity = direction * speed * delta
 		move_and_slide()

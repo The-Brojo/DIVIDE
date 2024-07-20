@@ -9,20 +9,6 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_fwbl3"]
 radius = 42.0
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_sa4hw"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_7xah4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_dvpss")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_wi6lh"]
 animations = [{
 "frames": [{
@@ -37,6 +23,20 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_sa4hw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7xah4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_dvpss")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="Curve" id="Curve_4dxlg"]
 _data = [Vector2(0.1375, 1), 0.0, 0.0, 0, 0, Vector2(0.875, 0.549451), 0.0, 0.0, 0, 0]
 point_count = 2
@@ -48,18 +48,6 @@ position = Vector2(1, 0)
 shape = SubResource("CircleShape2D_fwbl3")
 debug_color = Color(0.0431373, 0.439216, 0.694118, 1)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-modulate = Color(0.0431373, 0.439216, 0.694118, 1)
-position = Vector2(-100, 0)
-rotation = -1.5708
-sprite_frames = SubResource("SpriteFrames_sa4hw")
-frame_progress = 0.260204
-speed_scale = 1.5
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.0431178, 0.440087, 0.693408, 1)
-texture = ExtResource("3_buob1")
-
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 modulate = Color(0.105882, 0.52549, 0.803922, 0.858824)
 position = Vector2(-0.523561, 1.14923)
@@ -67,17 +55,29 @@ rotation = -1.5708
 scale = Vector2(0.205808, 0.220161)
 sprite_frames = SubResource("SpriteFrames_wi6lh")
 animation = &"new_animation"
-frame_progress = 0.812033
+frame_progress = 0.433919
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.0431373, 0.439216, 0.694118, 1)
+position = Vector2(-100, 0)
+rotation = -1.5708
+sprite_frames = SubResource("SpriteFrames_sa4hw")
+frame_progress = 0.779788
+speed_scale = 1.5
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.0431178, 0.440087, 0.693408, 1)
+texture = ExtResource("3_buob1")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 modulate = Color(0.0431373, 0.439216, 0.694118, 1)
-amount = 15
+amount = 20
 lifetime = 3.25
-explosiveness = 0.42
+explosiveness = 0.27
 randomness = 0.52
 lifetime_randomness = 0.12
 emission_shape = 2
-emission_sphere_radius = 84.0
+emission_sphere_radius = 52.49
 direction = Vector2(-300, 0)
 spread = 26.79
 gravity = Vector2(-300, 0)

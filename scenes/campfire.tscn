@@ -5,40 +5,40 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_etny7"]
 size = Vector2(14, 10)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_v1wp1"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_3u7o4"]
 atlas = ExtResource("1_3obdx")
-region = Rect2(112, 122, 16, 20)
+region = Rect2(112, 126, 16, 15)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ddq81"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekyqk"]
 atlas = ExtResource("1_3obdx")
-region = Rect2(128, 122, 16, 20)
+region = Rect2(128, 126, 16, 15)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8con8"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1ual"]
 atlas = ExtResource("1_3obdx")
-region = Rect2(144, 122, 16, 20)
+region = Rect2(144, 126, 16, 15)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_n55v6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hojho"]
 atlas = ExtResource("1_3obdx")
-region = Rect2(160, 122, 16, 20)
+region = Rect2(160, 126, 16, 15)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_y1p7m"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_csgot"]
 atlas = ExtResource("1_3obdx")
-region = Rect2(95, 126, 18, 15)
+region = Rect2(96, 126, 16, 15)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1qql6"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_v1wp1")
+"texture": SubResource("AtlasTexture_3u7o4")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ddq81")
+"texture": SubResource("AtlasTexture_ekyqk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8con8")
+"texture": SubResource("AtlasTexture_b1ual")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_n55v6")
+"texture": SubResource("AtlasTexture_hojho")
 }],
 "loop": true,
 "name": &"lit",
@@ -46,7 +46,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_y1p7m")
+"texture": SubResource("AtlasTexture_csgot")
 }],
 "loop": true,
 "name": &"unlit",
@@ -60,6 +60,7 @@ position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_etny7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 3)
+scale = Vector2(1, 0.966667)
 sprite_frames = SubResource("SpriteFrames_1qql6")
 animation = &"unlit"
-autoplay = "unlit"

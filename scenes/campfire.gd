@@ -20,8 +20,8 @@ func _on_area_2d_area_entered(area):
 
 
 func play_animation():
-	$Sprite2D/AnimatedSprite2D.animation = _animation
-	$Sprite2D/AnimatedSprite2D.play()
+	$AnimatedSprite2D.animation = _animation
+	$AnimatedSprite2D.play()
 	
 	
 

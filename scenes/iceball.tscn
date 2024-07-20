@@ -56,7 +56,7 @@ scale = Vector2(0.205808, 0.220161)
 sprite_frames = SubResource("SpriteFrames_wi6lh")
 animation = &"new_animation"
 autoplay = "new_animation"
-frame_progress = 0.210418
+frame_progress = 0.321529
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 modulate = Color(0.0431373, 0.439216, 0.694118, 1)
@@ -64,7 +64,7 @@ position = Vector2(-100, 0)
 rotation = -1.5708
 sprite_frames = SubResource("SpriteFrames_sa4hw")
 autoplay = "default"
-frame_progress = 0.444578
+frame_progress = 0.111244
 speed_scale = 1.5
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

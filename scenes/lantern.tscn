@@ -1,0 +1,137 @@
+[gd_scene load_steps=32 format=3 uid="uid://bunwciuhl36yx"]
+
+[ext_resource type="Texture2D" uid="uid://i43rnc863o0i" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_004.png" id="1_gpqbb"]
+[ext_resource type="Texture2D" uid="uid://q5chs4quoprx" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_005.png" id="2_mvdii"]
+[ext_resource type="Texture2D" uid="uid://cuc5v05q5wch5" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_006.png" id="3_sia2x"]
+[ext_resource type="Texture2D" uid="uid://b3shndx8s4q5r" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_007.png" id="4_jm4t5"]
+[ext_resource type="Texture2D" uid="uid://c6h0bgnu5uw7m" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_008.png" id="5_20gnl"]
+[ext_resource type="Texture2D" uid="uid://odunrq50v36v" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_009.png" id="6_ebrox"]
+[ext_resource type="Texture2D" uid="uid://bucmj2vtm0tjx" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_010.png" id="7_yy6u7"]
+[ext_resource type="Texture2D" uid="uid://8dscp20emyyj" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_011.png" id="8_2nwi5"]
+[ext_resource type="Texture2D" uid="uid://cdqtko2jmq664" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_012.png" id="9_446rg"]
+[ext_resource type="Texture2D" uid="uid://crdcuw4ccq706" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_013.png" id="10_3kanm"]
+[ext_resource type="Texture2D" uid="uid://1tqdaqhjs1ea" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_014.png" id="11_2c7x3"]
+[ext_resource type="Texture2D" uid="uid://ck2mlkyfw7ra3" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_015.png" id="12_84pbw"]
+[ext_resource type="Texture2D" uid="uid://1pkeh7ie1ny7" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_016.png" id="13_ty1mj"]
+[ext_resource type="Texture2D" uid="uid://c2vyn0nyfn2gb" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_017.png" id="14_eqegn"]
+[ext_resource type="Texture2D" uid="uid://1l7rqovibhac" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_018.png" id="15_p0fm6"]
+[ext_resource type="Texture2D" uid="uid://bmnkg1l60vxyr" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_019.png" id="16_6yp7q"]
+[ext_resource type="Texture2D" uid="uid://d3jd5a2a8mbxc" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_020.png" id="17_4armg"]
+[ext_resource type="Texture2D" uid="uid://dx0old0ob3tr4" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_021.png" id="18_scbta"]
+[ext_resource type="Texture2D" uid="uid://l7b8kje0ud36" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_022.png" id="19_43jln"]
+[ext_resource type="Texture2D" uid="uid://c3rsf0ucdmhxq" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_023.png" id="20_ot2lv"]
+[ext_resource type="Texture2D" uid="uid://0vmj8idmaobi" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_024.png" id="21_tvq07"]
+[ext_resource type="Texture2D" uid="uid://bmygvwed6dnuc" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_025.png" id="22_rlcns"]
+[ext_resource type="Texture2D" uid="uid://dop0yb6vyig16" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_026.png" id="23_o566u"]
+[ext_resource type="Texture2D" uid="uid://e5xon27x1guc" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_027.png" id="24_xegtx"]
+[ext_resource type="Texture2D" uid="uid://cxc1uplyqn8xi" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_028.png" id="25_ayfx3"]
+[ext_resource type="Texture2D" uid="uid://b8bwhagrtddx2" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_029.png" id="26_sfxd5"]
+[ext_resource type="Texture2D" uid="uid://btbd4r42fkqyr" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_030.png" id="27_xhroy"]
+[ext_resource type="Texture2D" uid="uid://cwmrkb3qpv3g3" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_031.png" id="28_aftul"]
+[ext_resource type="Texture2D" uid="uid://ck287lgdadc8l" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_032.png" id="29_g4max"]
+[ext_resource type="Texture2D" uid="uid://byv1ki1hn77jb" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_033.png" id="30_0vhdk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ytfb4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_gpqbb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mvdii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_sia2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jm4t5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_20gnl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ebrox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_yy6u7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2nwi5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_446rg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_3kanm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_2c7x3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_84pbw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ty1mj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_eqegn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_p0fm6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_6yp7q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_4armg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_scbta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_43jln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ot2lv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_tvq07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_rlcns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_o566u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_xegtx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ayfx3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_sfxd5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_xhroy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_aftul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_g4max")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_0vhdk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Lantern" type="Node2D"]
+scale = Vector2(0.2, 0.2)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ytfb4")
+frame_progress = 0.233827

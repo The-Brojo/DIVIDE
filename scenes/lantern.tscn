@@ -1,6 +1,7 @@
-[gd_scene load_steps=32 format=3 uid="uid://bunwciuhl36yx"]
+[gd_scene load_steps=35 format=3 uid="uid://bunwciuhl36yx"]
 
 [ext_resource type="Texture2D" uid="uid://i43rnc863o0i" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_004.png" id="1_gpqbb"]
+[ext_resource type="Script" path="res://scripts/lantern.gd" id="1_gtt1e"]
 [ext_resource type="Texture2D" uid="uid://q5chs4quoprx" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_005.png" id="2_mvdii"]
 [ext_resource type="Texture2D" uid="uid://cuc5v05q5wch5" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_006.png" id="3_sia2x"]
 [ext_resource type="Texture2D" uid="uid://b3shndx8s4q5r" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_007.png" id="4_jm4t5"]
@@ -129,9 +130,27 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Gradient" id="Gradient_dpfi8"]
+offsets = PackedFloat32Array(0.00462963, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2qx1f"]
+gradient = SubResource("Gradient_dpfi8")
+width = 512
+height = 512
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.833333, 0.15812)
+
 [node name="Lantern" type="Node2D"]
 scale = Vector2(0.2, 0.2)
+script = ExtResource("1_gtt1e")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ytfb4")
 frame_progress = 0.233827
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(1, 0.588235, 0.192157, 1)
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_2qx1f")

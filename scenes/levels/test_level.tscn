@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://dhvp2hiu5bcs"]
+[gd_scene load_steps=38 format=3 uid="uid://dhvp2hiu5bcs"]
 
 [ext_resource type="Texture2D" uid="uid://dgyj0d8krrsaa" path="res://assets/fantasy_ [version 2.0]/fantasy_/forestDesert_.png" id="1_lxo2a"]
 [ext_resource type="Texture2D" uid="uid://bai8p5mnmt6cu" path="res://assets/fantasy_ [version 2.0]/fantasy_/swampDesert_.png" id="2_d6il5"]
@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://bagu2fqhinmpp" path="res://assets/fantasy_ [version 2.0]/fantasy_/tundraSwampTaigaForestDesert_0.png" id="14_qiyx6"]
 [ext_resource type="Texture2D" uid="uid://dewejt878w2dj" path="res://assets/fantasy_ [version 2.0]/fantasy_/tundraSwampTaigaForestDesert_1.png" id="15_8ateu"]
 [ext_resource type="PackedScene" uid="uid://ciaq5e87f1fb5" path="res://scenes/player.tscn" id="16_w7qsv"]
+[ext_resource type="PackedScene" uid="uid://tcuhfvep5xog" path="res://scenes/light_detection.tscn" id="17_l1tbx"]
+[ext_resource type="Texture2D" uid="uid://igd6wbnsfi02" path="res://icon.svg" id="18_qkxsj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_37aak"]
 texture = ExtResource("1_lxo2a")
@@ -2478,6 +2480,8 @@ sources/12 = SubResource("TileSetAtlasSource_6lmyv")
 sources/13 = SubResource("TileSetAtlasSource_0xpst")
 sources/14 = SubResource("TileSetAtlasSource_iri2o")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d77vd"]
+
 [node name="TestLevel" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -2493,3 +2497,18 @@ layer_1/tile_data = PackedInt32Array(-131072, 131086, 3, 458753, 131086, 3, 1310
 
 [node name="NormalPlayer" parent="." instance=ExtResource("16_w7qsv")]
 position = Vector2(424, 185)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
+position = Vector2(657, 321)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_d77vd")
+
+[node name="Light Detection" parent="StaticBody2D" instance=ExtResource("17_l1tbx")]
+
+[node name="PointLight2D" type="PointLight2D" parent="." groups=["lights"]]
+position = Vector2(669, 218)
+shadow_enabled = true
+texture = ExtResource("18_qkxsj")
+texture_scale = 50.0

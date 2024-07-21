@@ -148,6 +148,7 @@ script = ExtResource("1_gtt1e")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ytfb4")
+autoplay = "default"
 frame_progress = 0.233827
 
 [node name="PointLight2D" type="PointLight2D" parent="."]

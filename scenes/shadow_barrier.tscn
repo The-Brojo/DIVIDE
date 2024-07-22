@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://c48hwhxdqas5"]
+
+[ext_resource type="Script" path="res://scripts/shadow_barrier.gd" id="1_qo7xd"]
+[ext_resource type="PackedScene" uid="uid://tcuhfvep5xog" path="res://scenes/light_detection.tscn" id="2_08p4p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d77vd"]
+
+[node name="ShadowBarrier" type="StaticBody2D"]
+position = Vector2(657, 321)
+script = ExtResource("1_qo7xd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_d77vd")
+
+[node name="Light Detection" parent="." instance=ExtResource("2_08p4p")]

@@ -13,4 +13,5 @@ func _process(_delta):
 	# Needs timer to keep disable for set time. You will see what I mean while testing
 	# Removes collision and reveals parent e.g. bridge
 	collision_shape_2d.disabled = !light_detection.is_lit
-	_parent.visible = light_detection.is_lit
+	if _parent:
+		_parent.visible = light_detection.is_lit

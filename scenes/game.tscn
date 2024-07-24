@@ -18,7 +18,7 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="HBoxContainer/InverseViewport"]
 handle_input_locally = false
-size = Vector2i(2, 2)
+size = Vector2i(574, 648)
 render_target_update_mode = 4
 
 [node name="TestLevel" parent="HBoxContainer/InverseViewport/SubViewport" instance=ExtResource("2_xlrvo")]
@@ -43,7 +43,7 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="HBoxContainer/NormalViewport"]
 handle_input_locally = false
-size = Vector2i(2, 2)
+size = Vector2i(574, 648)
 size_2d_override_stretch = true
 render_target_update_mode = 4
 

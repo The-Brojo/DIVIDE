@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://bcxob51rtg5p0"]
+
+[ext_resource type="Texture2D" uid="uid://bienv07i7s06q" path="res://assets/fantasy_ [version 2.0]/cave_/cave_ [resources].png" id="1_3obdx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_etny7"]
+size = Vector2(14, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1wp1"]
+atlas = ExtResource("1_3obdx")
+region = Rect2(112, 122, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ddq81"]
+atlas = ExtResource("1_3obdx")
+region = Rect2(128, 122, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8con8"]
+atlas = ExtResource("1_3obdx")
+region = Rect2(144, 122, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n55v6"]
+atlas = ExtResource("1_3obdx")
+region = Rect2(160, 122, 16, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1qql6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1wp1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ddq81")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8con8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n55v6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="litFire" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_etny7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
+sprite_frames = SubResource("SpriteFrames_1qql6")
+frame_progress = 0.542542

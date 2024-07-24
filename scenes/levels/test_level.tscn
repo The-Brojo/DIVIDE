@@ -2480,6 +2480,9 @@ sources/12 = SubResource("TileSetAtlasSource_6lmyv")
 sources/13 = SubResource("TileSetAtlasSource_0xpst")
 sources/14 = SubResource("TileSetAtlasSource_iri2o")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_631co"]
+radius = 13.0
+
 [node name="TestLevel" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]

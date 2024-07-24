@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://dhvp2hiu5bcs"]
+[gd_scene load_steps=38 format=3 uid="uid://bxkfh246xcvtr"]
 
 [ext_resource type="Texture2D" uid="uid://dgyj0d8krrsaa" path="res://assets/fantasy_ [version 2.0]/fantasy_/forestDesert_.png" id="1_lxo2a"]
 [ext_resource type="Texture2D" uid="uid://bai8p5mnmt6cu" path="res://assets/fantasy_ [version 2.0]/fantasy_/swampDesert_.png" id="2_d6il5"]
@@ -15,7 +15,9 @@
 [ext_resource type="Texture2D" uid="uid://t74ofrjhap7g" path="res://assets/fantasy_ [version 2.0]/fantasy_/tundraForest.png" id="13_gkbh8"]
 [ext_resource type="Texture2D" uid="uid://bagu2fqhinmpp" path="res://assets/fantasy_ [version 2.0]/fantasy_/tundraSwampTaigaForestDesert_0.png" id="14_qiyx6"]
 [ext_resource type="Texture2D" uid="uid://dewejt878w2dj" path="res://assets/fantasy_ [version 2.0]/fantasy_/tundraSwampTaigaForestDesert_1.png" id="15_8ateu"]
-[ext_resource type="PackedScene" uid="uid://ciaq5e87f1fb5" path="res://scenes/player.tscn" id="16_w7qsv"]
+[ext_resource type="PackedScene" uid="uid://112n8dho4c68" path="res://scenes/player.tscn" id="16_w7qsv"]
+[ext_resource type="PackedScene" uid="uid://828kq4sjgnb" path="res://scenes/campfire.tscn" id="17_y030h"]
+[ext_resource type="Script" path="res://scenes/campfire.gd" id="18_hoan4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_37aak"]
 texture = ExtResource("1_lxo2a")
@@ -2478,6 +2480,9 @@ sources/12 = SubResource("TileSetAtlasSource_6lmyv")
 sources/13 = SubResource("TileSetAtlasSource_0xpst")
 sources/14 = SubResource("TileSetAtlasSource_iri2o")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_631co"]
+radius = 13.0
+
 [node name="TestLevel" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -2492,4 +2497,18 @@ layer_1/navigation_enabled = false
 layer_1/tile_data = PackedInt32Array(-131072, 131086, 3, 458753, 131086, 3, 131084, 131086, 3, 131077, 131086, 3, 327688, 131086, 3, 393233, 131086, 3, 131098, 131086, 3, 589864, 131086, 3, 65575, 131086, 3, 589850, 131086, 3, 655386, 131086, 3, 851976, 131086, 3, 1114108, 131086, 3, 1245194, 131086, 3, 1441833, 131086, 3, 1376280, 131086, 3, -131075, 65550, 1, -196599, 65550, 1, 327703, 65550, 1, -262097, 65550, 1, -131038, 65550, 1)
 
 [node name="NormalPlayer" parent="." instance=ExtResource("16_w7qsv")]
-position = Vector2(424, 185)
+position = Vector2(507, 346)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(538, 328)
+shape = SubResource("CircleShape2D_631co")
+
+[node name="litFire" parent="." instance=ExtResource("17_y030h")]
+position = Vector2(567, 342)
+script = ExtResource("18_hoan4")
+
+[connection signal="area_entered" from="Area2D" to="litFire" method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="litFire" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="litFire" method="_on_area_2d_body_exited"]

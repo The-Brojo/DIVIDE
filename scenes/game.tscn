@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bd4c7ny1phbs6"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_6yfrv"]
-[ext_resource type="PackedScene" uid="uid://dhvp2hiu5bcs" path="res://scenes/test_level.tscn" id="2_xlrvo"]
+[ext_resource type="PackedScene" uid="uid://bxkfh246xcvtr" path="res://scenes/test_level.tscn" id="2_xlrvo"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_6yfrv")
@@ -18,7 +18,7 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="HBoxContainer/InverseViewport"]
 handle_input_locally = false
-size = Vector2i(574, 648)
+size = Vector2i(2, 2)
 render_target_update_mode = 4
 
 [node name="TestLevel" parent="HBoxContainer/InverseViewport/SubViewport" instance=ExtResource("2_xlrvo")]
@@ -44,7 +44,7 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="HBoxContainer/NormalViewport"]
 handle_input_locally = false
-size = Vector2i(574, 648)
+size = Vector2i(2, 2)
 size_2d_override_stretch = true
 render_target_update_mode = 4
 

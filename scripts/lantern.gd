@@ -1,4 +1,4 @@
-extends AnimatableBody2D
+extends StaticBody2D
 
 var placed: bool = false
 var relative_position: Vector2

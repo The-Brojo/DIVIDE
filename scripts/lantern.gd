@@ -7,7 +7,6 @@ var interact: Callable = Callable(self, "togglePlaced")
 @onready var point_light_2d: Light2D = $PointLight2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	sync_to_physics = false
 	parent = get_parent()
 	relative_position = position
 	set_visible(false)

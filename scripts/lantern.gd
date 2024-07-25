@@ -13,7 +13,7 @@ func _ready():
 	set_visible(false)
 	SignalBus.call_deferred("emit_signal", "on_light_spawn", point_light_2d)
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if Input.is_action_just_pressed("lantern") and !placed:
 		toggleVisible()
 func toggleVisible():

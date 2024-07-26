@@ -20,6 +20,6 @@ func toggleVisible():
 func togglePlaced():
 	placed = !placed
 	point_light_2d.shadow_item_cull_mask = 3 if placed else 1
-	set_collision_layer_value(2, placed)
+	parent.set_collision_mask_value(1, placed)
 	set_as_top_level(placed)
 	position = parent.global_position + relative_position if placed else relative_position

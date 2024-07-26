@@ -83,3 +83,5 @@ animation = &"unlit"
 color = Color(1, 0.588235, 0.192157, 1)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_1335f")
+
+[connection signal="area_entered" from="." to="." method="_toggleLight"]

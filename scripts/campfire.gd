@@ -22,19 +22,17 @@ func _process(delta):
 	pass
 
 #fire and ice balls are areas
-func _light(body):
-	_animation = 'lit'
-	$PointLight2D.visible = true
+func _toggleLight(body):
+	if body.name == 'fire':
+		_animation = 'lit'
+		$PointLight2D.visible = true
+	elif body.name == 'ice':
+		_animation = 'unlit'
+		$PointLight2D.visible = false
+		
 	play_animation()
-	print_debug("light")
+	print_debug(body.name)
 	
-	
-	
-func _unlight(body):
-	_animation = 'unlit'
-	$PointLight2D.visible = false
-	play_animation()
-	print_debug("unlight")
 	
 
 
@@ -43,3 +41,6 @@ func play_animation():
 	$AnimatedSprite2D.play()
 	
 	
+
+
+

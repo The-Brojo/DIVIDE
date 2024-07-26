@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://ba0y0ep2268y2" path="res://assets/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/addons/kenney_particle_pack/star_05.png" id="6_avugb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fwbl3"]
-radius = 42.0
+radius = 50.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wi6lh"]
 animations = [{
@@ -42,7 +42,7 @@ animations = [{
 _data = [Vector2(0.1375, 1), 0.0, 0.0, 0, 0, Vector2(0.875, 0.549451), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[node name="Node2D" type="Area2D"]
+[node name="ice" type="Area2D"]
 position = Vector2(1, 0)
 scale = Vector2(0.2, 0.2)
 script = ExtResource("1_2wqd0")

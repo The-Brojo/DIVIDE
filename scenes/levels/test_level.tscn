@@ -2507,6 +2507,7 @@ position = Vector2(657, 292)
 
 [node name="litFire" parent="." instance=ExtResource("19_jqvol")]
 position = Vector2(741, 322)
+collision_layer = 3
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(692, 306)

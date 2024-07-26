@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://ba0y0ep2268y2" path="res://assets/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/addons/kenney_particle_pack/star_05.png" id="6_yhg1r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fwbl3"]
-radius = 42.0
+radius = 120.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wi6lh"]
 animations = [{
@@ -42,7 +42,7 @@ animations = [{
 _data = [Vector2(0.1375, 1), 0.0, 0.0, 0, 0, Vector2(0.875, 0.549451), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[node name="Node2D" type="Area2D"]
+[node name="fire" type="Area2D"]
 position = Vector2(1, 0)
 scale = Vector2(0.2, 0.2)
 script = ExtResource("1_ly5lt")
@@ -60,7 +60,7 @@ scale = Vector2(0.2, 0.18)
 sprite_frames = SubResource("SpriteFrames_wi6lh")
 animation = &"new_animation"
 autoplay = "new_animation"
-frame_progress = 0.671818
+frame_progress = 0.971024
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 modulate = Color(0.451554, 0.283841, 0.172239, 0.827451)
@@ -69,7 +69,7 @@ rotation = -1.5708
 scale = Vector2(0.25, 0.320873)
 sprite_frames = SubResource("SpriteFrames_sa4hw")
 autoplay = "default"
-frame_progress = 0.6361
+frame_progress = 0.935306
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.883083, 0.364367, 0.229197, 1)
@@ -91,3 +91,8 @@ spread = 26.79
 gravity = Vector2(-125, 0)
 scale_amount_min = 0.2
 scale_amount_curve = SubResource("Curve_4dxlg")
+
+[node name="life" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="life" to="." method="_on_life_timeout"]

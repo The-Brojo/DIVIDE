@@ -375,7 +375,7 @@ polygon = PackedVector2Array(-6, -6, 6, -6, 6, 9, -6, 9)
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
-collision_mask = 2
+collision_mask = 4
 script = ExtResource("1_0xr5b")
 speed = 5000
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://dhvp2hiu5bcs"]
+[gd_scene load_steps=37 format=3 uid="uid://dhvp2hiu5bcs"]
 
 [ext_resource type="Texture2D" uid="uid://dgyj0d8krrsaa" path="res://assets/fantasy_ [version 2.0]/fantasy_/forestDesert_.png" id="1_lxo2a"]
 [ext_resource type="Texture2D" uid="uid://bai8p5mnmt6cu" path="res://assets/fantasy_ [version 2.0]/fantasy_/swampDesert_.png" id="2_d6il5"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://dewejt878w2dj" path="res://assets/fantasy_ [version 2.0]/fantasy_/tundraSwampTaigaForestDesert_1.png" id="15_8ateu"]
 [ext_resource type="PackedScene" uid="uid://112n8dho4c68" path="res://scenes/player.tscn" id="16_w7qsv"]
 [ext_resource type="PackedScene" uid="uid://c48hwhxdqas5" path="res://scenes/shadow_barrier.tscn" id="18_2wo0a"]
+[ext_resource type="PackedScene" uid="uid://dcfo4hfqppfkn" path="res://scenes/crate.tscn" id="18_ht6ih"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_37aak"]
 texture = ExtResource("1_lxo2a")
@@ -2462,8 +2463,8 @@ texture = ExtResource("15_8ateu")
 
 [sub_resource type="TileSet" id="TileSet_ckgve"]
 occlusion_layer_0/light_mask = 1
-physics_layer_0/collision_layer = 3
-physics_layer_0/collision_mask = 3
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_37aak")
 sources/1 = SubResource("TileSetAtlasSource_6vw6b")
 sources/2 = SubResource("TileSetAtlasSource_t4ps3")
@@ -2494,6 +2495,11 @@ layer_1/navigation_enabled = false
 layer_1/tile_data = PackedInt32Array(-131072, 131086, 3, 458753, 131086, 3, 131084, 131086, 3, 131077, 131086, 3, 327688, 131086, 3, 393233, 131086, 3, 131098, 131086, 3, 589864, 131086, 3, 65575, 131086, 3, 589850, 131086, 3, 655386, 131086, 3, 851976, 131086, 3, 1114108, 131086, 3, 1245194, 131086, 3, 1441833, 131086, 3, 1376280, 131086, 3, -131075, 65550, 1, -196599, 65550, 1, 327703, 65550, 1, -262097, 65550, 1, -131038, 65550, 1)
 
 [node name="NormalPlayer" parent="." instance=ExtResource("16_w7qsv")]
-position = Vector2(424, 185)
+position = Vector2(406, 186)
+collision_mask = 4
 
 [node name="ShadowBarrier" parent="." instance=ExtResource("18_2wo0a")]
+
+[node name="Crate" parent="." instance=ExtResource("18_ht6ih")]
+position = Vector2(344, 191)
+lock_rotation = true

@@ -4,6 +4,7 @@ extends CharacterBody2D
 var _animation = 'idle_down'
 var animation_format ="{state}_{direction}"
 
+
 @export var is_focued: bool = true
 
 enum States {IDLE, WALK, HURT, DIE}
@@ -26,14 +27,16 @@ func _process(delta):
 		_state = States.WALK
 	else:
 		_state = States.IDLE
-
+	
 	set_direction(direction)
 	_animation = animation_format.format({ 
 		"state": States.keys()[_state],
 		"direction": Directions.keys()[_direction],
 	}).to_lower()
 	play_animation()
-
+	
+	
+	
 func set_direction(direction: Vector2):
 	if abs(direction.x) > abs(direction.y):
 		if direction.x > 0:
@@ -55,4 +58,9 @@ func play_animation():
 	$AnimatedSprite2D.flip_h = _direction == Directions.LEFT
 	$AnimatedSprite2D.animation = _animation
 	$AnimatedSprite2D.play()
+#
 
+	
+	
+		
+	

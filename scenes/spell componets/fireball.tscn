@@ -1,0 +1,93 @@
+[gd_scene load_steps=11 format=3 uid="uid://dlbvhswy3tvsq"]
+
+[ext_resource type="Script" path="res://scripts/projectile.gd" id="1_ly5lt"]
+[ext_resource type="Texture2D" uid="uid://6r0kvnysld3d" path="res://assets/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/addons/kenney_particle_pack/light_01.png" id="2_4wm7k"]
+[ext_resource type="Texture2D" uid="uid://4b6o5s0usjk1" path="res://assets/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/addons/kenney_particle_pack/light_03.png" id="3_omnmi"]
+[ext_resource type="Texture2D" uid="uid://42russddrxol" path="res://assets/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/addons/kenney_particle_pack/fire_01.png" id="4_kbkb2"]
+[ext_resource type="Texture2D" uid="uid://btifjf13b32wl" path="res://assets/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/addons/kenney_particle_pack/fire_02.png" id="5_kv0o5"]
+[ext_resource type="Texture2D" uid="uid://ba0y0ep2268y2" path="res://assets/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/addons/kenney_particle_pack/star_05.png" id="6_yhg1r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fwbl3"]
+radius = 42.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wi6lh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4wm7k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_omnmi")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sa4hw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_kbkb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_kv0o5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Curve" id="Curve_4dxlg"]
+_data = [Vector2(0.1375, 1), 0.0, 0.0, 0, 0, Vector2(0.875, 0.549451), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="Node2D" type="Area2D"]
+position = Vector2(1, 0)
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_ly5lt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.25, 0.25)
+shape = SubResource("CircleShape2D_fwbl3")
+debug_color = Color(0.732129, 0.459152, 0.305297, 0.42)
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.882353, 0.364706, 0.227451, 1)
+position = Vector2(-0.0733161, -1.06186)
+rotation = -1.5708
+scale = Vector2(0.2, 0.18)
+sprite_frames = SubResource("SpriteFrames_wi6lh")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.671818
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.451554, 0.283841, 0.172239, 0.827451)
+position = Vector2(-68.1436, 6.56796e-05)
+rotation = -1.5708
+scale = Vector2(0.25, 0.320873)
+sprite_frames = SubResource("SpriteFrames_sa4hw")
+autoplay = "default"
+frame_progress = 0.6361
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.883083, 0.364367, 0.229197, 1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_yhg1r")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+modulate = Color(0.667637, 0.242062, 0.126709, 1)
+scale = Vector2(0.25, 0.25)
+amount = 30
+lifetime = 0.6
+explosiveness = 0.55
+randomness = 0.38
+lifetime_randomness = 0.28
+emission_shape = 2
+emission_sphere_radius = 55.01
+direction = Vector2(-100, 0)
+spread = 26.79
+gravity = Vector2(-125, 0)
+scale_amount_min = 0.2
+scale_amount_curve = SubResource("Curve_4dxlg")

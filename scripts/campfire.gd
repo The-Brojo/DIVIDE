@@ -2,10 +2,19 @@ extends Area2D
 
 var _animation = 'unlit'
 
+signal deferred
+
+@onready var point_light_2d: Light2D = $PointLight2D
+
+	
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	SignalBus.call_deferred("emit_signal", "on_light_spawn", point_light_2d)
+	$PointLight2D.visible = false
 	_animation = 'unlit'
 	play_animation()
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -13,10 +22,20 @@ func _process(delta):
 	pass
 
 #fire and ice balls are areas
-func _on_area_2d_area_entered(area):
+func _light(body):
 	_animation = 'lit'
+	$PointLight2D.visible = true
 	play_animation()
-	print("this area")
+	print_debug("light")
+	
+	
+	
+func _unlight(body):
+	_animation = 'unlit'
+	$PointLight2D.visible = false
+	play_animation()
+	print_debug("unlight")
+	
 
 
 func play_animation():
@@ -24,14 +43,3 @@ func play_animation():
 	$AnimatedSprite2D.play()
 	
 	
-
-#player is a body so they will light the campfire by walking over the space
-func _on_area_2d_body_entered(body):
-	_animation = 'lit'
-	play_animation()
-	
-
-#player is a body so they will unlight the campfire by walking over the space
-func _on_area_2d_body_exited(body):
-	_animation = 'unlit'
-	play_animation()

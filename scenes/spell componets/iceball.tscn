@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://d0ylle4ed8n7s"]
+[gd_scene load_steps=11 format=3 uid="uid://d0ylle4ed8n7s"]
 
-[ext_resource type="Texture2D" uid="uid://42russddrxol" path="res://assets/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/addons/kenney_particle_pack/fire_01.png" id="1_7xah4"]
-[ext_resource type="Texture2D" uid="uid://btifjf13b32wl" path="res://assets/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/addons/kenney_particle_pack/fire_02.png" id="2_dvpss"]
-[ext_resource type="Texture2D" uid="uid://ba0y0ep2268y2" path="res://assets/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/addons/kenney_particle_pack/star_05.png" id="3_buob1"]
-[ext_resource type="Texture2D" uid="uid://6r0kvnysld3d" path="res://assets/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/addons/kenney_particle_pack/light_01.png" id="4_q68nm"]
-[ext_resource type="Texture2D" uid="uid://4b6o5s0usjk1" path="res://assets/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/addons/kenney_particle_pack/light_03.png" id="5_y4bqj"]
+[ext_resource type="Script" path="res://scripts/projectile.gd" id="1_2wqd0"]
+[ext_resource type="Texture2D" uid="uid://6r0kvnysld3d" path="res://assets/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/addons/kenney_particle_pack/light_01.png" id="2_cjoo6"]
+[ext_resource type="Texture2D" uid="uid://4b6o5s0usjk1" path="res://assets/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/addons/kenney_particle_pack/light_03.png" id="3_errxq"]
+[ext_resource type="Texture2D" uid="uid://42russddrxol" path="res://assets/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/addons/kenney_particle_pack/fire_01.png" id="4_i5gnw"]
+[ext_resource type="Texture2D" uid="uid://btifjf13b32wl" path="res://assets/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/addons/kenney_particle_pack/fire_02.png" id="5_n3mhm"]
+[ext_resource type="Texture2D" uid="uid://ba0y0ep2268y2" path="res://assets/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/addons/kenney_particle_pack/star_05.png" id="6_avugb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fwbl3"]
 radius = 42.0
@@ -13,10 +14,10 @@ radius = 42.0
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_q68nm")
+"texture": ExtResource("2_cjoo6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_y4bqj")
+"texture": ExtResource("3_errxq")
 }],
 "loop": true,
 "name": &"new_animation",
@@ -27,10 +28,10 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_7xah4")
+"texture": ExtResource("4_i5gnw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_dvpss")
+"texture": ExtResource("5_n3mhm")
 }],
 "loop": true,
 "name": &"default",
@@ -43,8 +44,11 @@ point_count = 2
 
 [node name="Node2D" type="Area2D"]
 position = Vector2(1, 0)
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_2wqd0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_fwbl3")
 debug_color = Color(0.0431373, 0.439216, 0.694118, 1)
 
@@ -52,7 +56,7 @@ debug_color = Color(0.0431373, 0.439216, 0.694118, 1)
 modulate = Color(0.105882, 0.52549, 0.803922, 0.858824)
 position = Vector2(-0.523561, 1.14923)
 rotation = -1.5708
-scale = Vector2(0.205808, 0.220161)
+scale = Vector2(0.15, 0.16)
 sprite_frames = SubResource("SpriteFrames_wi6lh")
 animation = &"new_animation"
 autoplay = "new_animation"
@@ -60,8 +64,9 @@ frame_progress = 0.321529
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 modulate = Color(0.0431373, 0.439216, 0.694118, 1)
-position = Vector2(-100, 0)
+position = Vector2(-50, 0)
 rotation = -1.5708
+scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_sa4hw")
 autoplay = "default"
 frame_progress = 0.111244
@@ -69,20 +74,26 @@ speed_scale = 1.5
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.0431178, 0.440087, 0.693408, 1)
-texture = ExtResource("3_buob1")
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_avugb")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 modulate = Color(0.0431373, 0.439216, 0.694118, 1)
-amount = 20
-lifetime = 3.25
+amount = 19
+lifetime = 0.75
 explosiveness = 0.27
 randomness = 0.52
 lifetime_randomness = 0.12
 emission_shape = 2
-emission_sphere_radius = 52.49
-direction = Vector2(-300, 0)
+emission_sphere_radius = 24.49
+direction = Vector2(-100, 0)
 spread = 26.79
-gravity = Vector2(-300, 0)
+gravity = Vector2(-100, 0)
 scale_amount_min = 0.0
-scale_amount_max = 8.7
+scale_amount_max = 2.3
 scale_amount_curve = SubResource("Curve_4dxlg")
+
+[node name="life" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="life" to="." method="_on_life_timeout"]

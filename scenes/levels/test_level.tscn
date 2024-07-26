@@ -2496,7 +2496,6 @@ layer_1/tile_data = PackedInt32Array(-131072, 131086, 3, 458753, 131086, 3, 1310
 
 [node name="NormalPlayer" parent="." instance=ExtResource("16_w7qsv")]
 position = Vector2(406, 186)
-collision_mask = 4
 
 [node name="ShadowBarrier" parent="." instance=ExtResource("18_2wo0a")]
 

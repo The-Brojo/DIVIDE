@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcfo4hfqppfkn"]
+
+[ext_resource type="Texture2D" uid="uid://2n4okwsh6ndw" path="res://assets/fantasy_ [version 2.0]/taiga_/taiga_ [resources].png" id="1_ajjiu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pg4xe"]
+size = Vector2(12, 13)
+
+[node name="Crate" type="RigidBody2D"]
+collision_layer = 8
+collision_mask = 15
+mass = 2000.0
+gravity_scale = 0.0
+linear_damp = 5.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ajjiu")
+region_enabled = true
+region_rect = Rect2(113.077, 94.5927, 13.9184, 14.0812)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_pg4xe")

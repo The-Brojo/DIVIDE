@@ -374,10 +374,10 @@ size = Vector2(12, 15)
 polygon = PackedVector2Array(-6, -6, 6, -6, 6, 9, -6, 9)
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 1
 collision_layer = 2
-collision_mask = 2
+collision_mask = 6
 script = ExtResource("1_0xr5b")
-speed = 5000
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 1)

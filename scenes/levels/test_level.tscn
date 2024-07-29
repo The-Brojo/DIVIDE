@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://dhvp2hiu5bcs"]
+[gd_scene load_steps=39 format=3 uid="uid://dhvp2hiu5bcs"]
 
 [ext_resource type="Texture2D" uid="uid://dgyj0d8krrsaa" path="res://assets/fantasy_ [version 2.0]/fantasy_/forestDesert_.png" id="1_lxo2a"]
 [ext_resource type="Texture2D" uid="uid://bai8p5mnmt6cu" path="res://assets/fantasy_ [version 2.0]/fantasy_/swampDesert_.png" id="2_d6il5"]
@@ -17,7 +17,11 @@
 [ext_resource type="Texture2D" uid="uid://dewejt878w2dj" path="res://assets/fantasy_ [version 2.0]/fantasy_/tundraSwampTaigaForestDesert_1.png" id="15_8ateu"]
 [ext_resource type="PackedScene" uid="uid://112n8dho4c68" path="res://scenes/player.tscn" id="16_w7qsv"]
 [ext_resource type="PackedScene" uid="uid://c48hwhxdqas5" path="res://scenes/shadow_barrier.tscn" id="18_2wo0a"]
+<<<<<<< HEAD
+[ext_resource type="PackedScene" uid="uid://828kq4sjgnb" path="res://scenes/campfire.tscn" id="19_jqvol"]
+=======
 [ext_resource type="PackedScene" uid="uid://dcfo4hfqppfkn" path="res://scenes/crate.tscn" id="18_ht6ih"]
+>>>>>>> main
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_37aak"]
 texture = ExtResource("1_lxo2a")
@@ -2481,6 +2485,8 @@ sources/12 = SubResource("TileSetAtlasSource_6lmyv")
 sources/13 = SubResource("TileSetAtlasSource_0xpst")
 sources/14 = SubResource("TileSetAtlasSource_iri2o")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_beajs"]
+
 [node name="TestLevel" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -2495,6 +2501,31 @@ layer_1/navigation_enabled = false
 layer_1/tile_data = PackedInt32Array(-131072, 131086, 3, 458753, 131086, 3, 131084, 131086, 3, 131077, 131086, 3, 327688, 131086, 3, 393233, 131086, 3, 131098, 131086, 3, 589864, 131086, 3, 65575, 131086, 3, 589850, 131086, 3, 655386, 131086, 3, 851976, 131086, 3, 1114108, 131086, 3, 1245194, 131086, 3, 1441833, 131086, 3, 1376280, 131086, 3, -131075, 65550, 1, -196599, 65550, 1, 327703, 65550, 1, -262097, 65550, 1, -131038, 65550, 1)
 
 [node name="NormalPlayer" parent="." instance=ExtResource("16_w7qsv")]
+<<<<<<< HEAD
+position = Vector2(727, 282)
+
+[node name="Lantern" parent="." instance=ExtResource("17_8crvx")]
+visible = false
+position = Vector2(657, 292)
+
+[node name="ShadowBarrier" parent="." instance=ExtResource("18_2wo0a")]
+
+[node name="litFire" parent="." instance=ExtResource("19_jqvol")]
+position = Vector2(741, 322)
+collision_layer = 3
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(692, 306)
+scale = Vector2(2.0228, 1.89487)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.988737, 9.49934)
+shape = SubResource("RectangleShape2D_beajs")
+
+[connection signal="body_entered" from="Area2D" to="litFire" method="_light"]
+[connection signal="body_exited" from="Area2D" to="litFire" method="_unlight"]
+=======
 position = Vector2(406, 186)
 
 [node name="ShadowBarrier" parent="." instance=ExtResource("18_2wo0a")]
@@ -2502,3 +2533,4 @@ position = Vector2(406, 186)
 [node name="Crate" parent="." instance=ExtResource("18_ht6ih")]
 position = Vector2(344, 191)
 lock_rotation = true
+>>>>>>> main

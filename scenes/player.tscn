@@ -2,7 +2,11 @@
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_0xr5b"]
 [ext_resource type="Texture2D" uid="uid://bboucy6k2agn4" path="res://assets/Prototype_Character.png" id="1_bt2mo"]
+<<<<<<< HEAD
+[ext_resource type="PackedScene" uid="uid://cmqlormpu8w5x" path="res://scenes/spell componets/wand.tscn" id="3_n4vxa"]
+=======
 [ext_resource type="PackedScene" uid="uid://bunwciuhl36yx" path="res://scenes/lantern.tscn" id="3_3uk84"]
+>>>>>>> main
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c0bmn"]
 atlas = ExtResource("1_bt2mo")
@@ -374,9 +378,13 @@ size = Vector2(12, 15)
 polygon = PackedVector2Array(-6, -6, 6, -6, 6, 9, -6, 9)
 
 [node name="Player" type="CharacterBody2D"]
+<<<<<<< HEAD
+collision_layer = 2
+=======
 z_index = 1
 collision_layer = 2
 collision_mask = 6
+>>>>>>> main
 script = ExtResource("1_0xr5b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -390,7 +398,13 @@ shape = SubResource("RectangleShape2D_82inb")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 occluder = SubResource("OccluderPolygon2D_l64qp")
+<<<<<<< HEAD
+
+[node name="wand" parent="." instance=ExtResource("3_n4vxa")]
+position = Vector2(-5, 3)
+=======
 occluder_light_mask = 2
 
 [node name="Lantern" parent="." instance=ExtResource("3_3uk84")]
 position = Vector2(4, 5)
+>>>>>>> main

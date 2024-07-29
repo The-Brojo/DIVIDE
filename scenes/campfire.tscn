@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://828kq4sjgnb"]
+[gd_scene load_steps=12 format=3 uid="uid://828kq4sjgnb"]
 
 [ext_resource type="Texture2D" uid="uid://bienv07i7s06q" path="res://assets/fantasy_ [version 2.0]/cave_/cave_ [resources].png" id="1_3obdx"]
+[ext_resource type="Script" path="res://scripts/campfire.gd" id="1_cx1hy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_etny7"]
 size = Vector2(14, 10)
@@ -53,7 +54,20 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Gradient" id="Gradient_dpfi8"]
+offsets = PackedFloat32Array(0.00462963, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1335f"]
+gradient = SubResource("Gradient_dpfi8")
+width = 512
+height = 512
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.833333, 0.15812)
+
 [node name="litFire" type="Area2D"]
+script = ExtResource("1_cx1hy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4)
@@ -64,3 +78,11 @@ position = Vector2(0, 3)
 scale = Vector2(1, 0.966667)
 sprite_frames = SubResource("SpriteFrames_1qql6")
 animation = &"unlit"
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(0.5, 0.5)
+color = Color(1, 0.588235, 0.192157, 1)
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_1335f")
+
+[connection signal="area_entered" from="." to="." method="_toggleLight"]

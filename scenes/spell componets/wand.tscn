@@ -39,7 +39,7 @@ script = ExtResource("1_q456p")
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_8ogh2")
 animation = &"ICE"
-frame_progress = 0.931509
+frame_progress = 0.722068
 
 [node name="spellTimer" type="Timer" parent="."]
 one_shot = true

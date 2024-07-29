@@ -1,18 +1,20 @@
 extends Node2D
 
+enum States {ICE, FIRE, BROKE}
+
 @onready var map = get_parent()
 @onready var fireball = load("res://scenes/spell componets/fireball.tscn")
 @onready var iceball = load("res://scenes/spell componets/iceball.tscn")
 @onready var spellTimer = $spellTimer
+@export var _state: int = States.ICE
 
-enum States {BROKE, FIRE, ICE}
-var _state: int = States.BROKE
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	play_animation()
 
 func stateChange():# to change the state of the wand
-	_state = (_state+1)%3
+	_state = (_state+1)%2
 	play_animation()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

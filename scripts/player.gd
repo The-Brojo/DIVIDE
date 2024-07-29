@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed = 400
+@export var speed = 4000
 var _animation = 'idle_down'
 var animation_format ="{state}_{direction}"
 

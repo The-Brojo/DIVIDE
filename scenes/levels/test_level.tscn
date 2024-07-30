@@ -2503,7 +2503,7 @@ position = Vector2(727, 282)
 [node name="ShadowBarrier" parent="." instance=ExtResource("18_2wo0a")]
 
 [node name="litFire" parent="." instance=ExtResource("19_jqvol")]
-position = Vector2(747, 323)
+position = Vector2(731, 319)
 collision_layer = 3
 
 [node name="Crate" parent="." instance=ExtResource("18_ht6ih")]

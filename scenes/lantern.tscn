@@ -31,7 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://cwmrkb3qpv3g3" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_031.png" id="28_aftul"]
 [ext_resource type="Texture2D" uid="uid://ck287lgdadc8l" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_032.png" id="29_g4max"]
 [ext_resource type="Texture2D" uid="uid://byv1ki1hn77jb" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_033.png" id="30_0vhdk"]
-[ext_resource type="PackedScene" uid="uid://cvmro5mipulpa" path="res://Interactable.tscn" id="32_4af1m"]
+[ext_resource type="PackedScene" uid="uid://cvmro5mipulpa" path="res://scenes/Interactable.tscn" id="32_4af1m"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ytfb4"]
 animations = [{

@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://bunwciuhl36yx"]
+[gd_scene load_steps=38 format=3 uid="uid://bunwciuhl36yx"]
 
 [ext_resource type="Texture2D" uid="uid://i43rnc863o0i" path="res://assets/lantern/Lantern 1 Small - Bronze and Orange_004.png" id="1_gpqbb"]
 [ext_resource type="Script" path="res://scripts/lantern.gd" id="1_gtt1e"]
@@ -146,6 +146,9 @@ fill_to = Vector2(0.833333, 0.15812)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_snjt0"]
 size = Vector2(20, 25)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_l1mtt"]
+radius = 75.0
+
 [node name="Lantern" type="StaticBody2D"]
 scale = Vector2(0.2, 0.2)
 collision_mask = 7
@@ -166,3 +169,6 @@ position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_snjt0")
 
 [node name="Interactable" parent="." instance=ExtResource("32_4af1m")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+shape = SubResource("CircleShape2D_l1mtt")

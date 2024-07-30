@@ -9,6 +9,7 @@ enum States {ICE, FIRE, BROKE}
 @export var _state: int = States.ICE
 
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	play_animation()
